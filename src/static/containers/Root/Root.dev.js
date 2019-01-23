@@ -19,11 +19,9 @@ export default class Root extends React.Component {
             <div>
                 <Provider store={this.props.store}>
                     <div>
-                        <App>
-                            <ConnectedRouter history={this.props.history}>
-                                {routes}
-                            </ConnectedRouter>
-                        </App>
+                        <ConnectedRouter history={this.props.history}>
+                            <App children={routes}></App>
+                        </ConnectedRouter>
                         <DevTools />
                     </div>
                 </Provider>
