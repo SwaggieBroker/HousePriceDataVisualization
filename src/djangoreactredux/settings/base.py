@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django_extensions',
 
     'accounts',
+    'his_prices',
     'base'
 ]
 

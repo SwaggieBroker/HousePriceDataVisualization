@@ -11,7 +11,7 @@ DATABASES = {
         'OPTIONS': {
             'init_command': 'SET default_storage_engine=INNODB',
         },
-        'NAME': 'HousePrice',
+        'NAME': 'TestDB',
         'USER': 'root',
         'PASSWORD': 'passcode!',
         'HOST': '127.0.0.1',
