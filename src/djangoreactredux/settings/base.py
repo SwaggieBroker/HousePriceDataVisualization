@@ -27,6 +27,9 @@ INSTALLED_APPS = [
 
     'accounts',
     'his_prices',
+    'houseinfo',
+    'rentinfo',
+    'sellinfo',
     'base'
 ]
 
