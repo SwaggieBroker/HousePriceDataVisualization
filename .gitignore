@@ -5,6 +5,9 @@
 .vscode
 .settings
 
+# Credential
+src/djangoreactredux/my.py
+
 # Random files
 *~
 \#*
