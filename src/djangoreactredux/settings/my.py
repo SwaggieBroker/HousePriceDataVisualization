@@ -1,3 +1,3 @@
-dbName = 'TestDB'
+dbName = 'houseprice'
 dbUser = 'root'
-dbPassword = 'passcode!'
+dbPassword = 'root2018'
