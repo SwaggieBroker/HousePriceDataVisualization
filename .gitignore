@@ -48,3 +48,4 @@ scripts/
 # mac os hidden files
 .DS_Store
 
+src/djangoreactredux/settings/my.py
