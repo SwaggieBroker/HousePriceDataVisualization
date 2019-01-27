@@ -1,4 +1,5 @@
 from djangoreactredux.settings.base import *  # NOQA (ignore all errors on this line)
+from djangoreactredux.settings.my import * 
 
 
 DEBUG = True
@@ -11,9 +12,9 @@ DATABASES = {
         'OPTIONS': {
             'init_command': 'SET default_storage_engine=INNODB',
         },
-        'NAME': 'TestDB',
-        'USER': 'root',
-        'PASSWORD': 'passcode!',
+        'NAME': dbName,
+        'USER': dbUser,
+        'PASSWORD': dbPassword,
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
