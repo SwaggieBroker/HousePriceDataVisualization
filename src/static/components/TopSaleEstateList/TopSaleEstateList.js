@@ -11,40 +11,41 @@ export default class TopSaleEstateList extends React.Component {
           pathname: PropTypes.string
       }),
       isAuthenticated: PropTypes.bool.isRequired,
-      dispatch: PropTypes.func.isRequired
-  };
+      dataFetchTopCommunities: PropTypes.func.isRequired,
+      topCommunities: PropTypes.shape({
+        data: PropTypes.array,
+        isFetching: PropTypes.bool,
+      }),  
+    };
 
   static defaultProps = {
-      location: undefined
+      location: undefined,
+      topCommunities: {
+        data: null,
+        isFetching: false,
+      },
   };
 
-  render() {
-    const data = [
-      {
-        title: 'Ant Design Title 1',
-      },
-      {
-        title: 'Ant Design Title 2',
-      },
-      {
-        title: 'Ant Design Title 3',
-      },
-      {
-        title: 'Ant Design Title 4',
-      },
-    ];
+  componentDidMount() {
+    this.props.dataFetchTopCommunities();
+  }
 
+  render() {
+    const { topCommunities } = this.props;
+    if (!topCommunities.data || topCommunities.isFetching) {
+      return (<div> Loading top communities ... </div>);
+    }
+    console.log(topCommunities);
     return (
       <List
         itemLayout="horizontal"
-        dataSource={data}
+        dataSource={topCommunities.data}
         renderItem={item => (
           <List.Item>
             <List.Item.Meta
-              avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-              title={<a href="https://ant.design">{item.title}</a>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+              title={<a href="https://ant.design">{item.community}</a>}
             />
+            {item.count}
           </List.Item>
         )}
       />

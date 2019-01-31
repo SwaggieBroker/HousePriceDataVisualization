@@ -67,7 +67,7 @@ class HomeView extends React.Component {
 
                 <div>
                     <section>
-                        <h3> 全市交易量前十小区 </h3>
+                        <h3> 全市在售房量前十小区 </h3>
                         <TopSaleEstateList />
                     </section>
 

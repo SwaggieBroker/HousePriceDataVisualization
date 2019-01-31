@@ -24,11 +24,11 @@ class ListTopNbyColumn(GenericAPIView):
     def get(self, request, column, num):
         
         columns = HouseInfo.objects.values(column) \
-            .annotate(column_count=Count(column)) \
-            .order_by('-column_count')[:int(num)]
+            .annotate(count=Count(column)) \
+            .order_by('-count')[:int(num)]
         
         if columns.count() > 0:
-            data = list(columns)
+            data = { 'data': list(columns) }
             json.dumps(data)
             return Response(data, status=status.HTTP_200_OK)
 
