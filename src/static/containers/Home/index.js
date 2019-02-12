@@ -8,6 +8,7 @@ import './style.scss';
 import customLogo from './images/logo.jpg';
 
 import TopSaleEstateList from "../../components/TopSaleEstateList";
+import TopSoldEstateList from "../../components/TopSoldEstateList";
 import TrendLineChart from "../../components/TrendLineChart";
 
 const Search = Input.Search;
@@ -69,6 +70,11 @@ class HomeView extends React.Component {
                     <section>
                         <h3> 全市在售房量前十小区 </h3>
                         <TopSaleEstateList />
+                    </section>
+
+                    <section>
+                        <h3> 全市已售房量前十小区 </h3>
+                        <TopSoldEstateList />
                     </section>
 
                     <section>
