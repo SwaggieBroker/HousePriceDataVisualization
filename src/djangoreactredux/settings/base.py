@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'houseinfo',
     'rentinfo',
     'sellinfo',
+    'community',
     'base'
 ]
 
